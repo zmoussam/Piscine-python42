@@ -1,0 +1,70 @@
+#Output a list of installed packages and their versions
+o output a list of installed packages and their versions in conda, 
+you can use the following command in your terminal or Anaconda Prompt:
+
+|
+|____ in conda : @> conda list
+
+For Python packages installed with pip, you can use 
+the following command in your terminal or command prompt:
+
+|
+|____ or : @> pip list
+|
+|____ For packages installed with the apt package manager on Linux systems, 
+      you can use the following command in your terminal : @> dpkg --list
+
+# Show the package metadata of numpy
+1. To show the package metadata of NumPy in Python, 
+you can use the pip show command followed by the package name. Here's how to do it:
+
+|
+|____ @> pip show numpy
+
+2. To show the package metadata of NumPy using conda,
+you can use the following command in your terminal or Anaconda Prompt:
+|
+|_____ using conda : @> conda info numpy
+
+# Remove the package numpy
+1. o remove the NumPy package from your Python environment using 
+pip, you can use the following command in your terminal or command prompt
+
+|
+|____ @> pip uninstall numpy
+
+2. If you are using conda, you can use the following command in your terminal or Anaconda Prompt
+
+|
+|____ @> conda remove numpy
+
+# (Re)install the package numpy
+
+To (re)install the NumPy package in your Python environment using pip, 
+you can use the following command in your terminal or command prompt:
+
+|
+|____ @> pip install numpy
+
+If you want to install a specific version of NumPy, you can use the following pip command:
+|
+|___ @> pip install numpy==<version>
+
+If you are using conda, you can use the following command in your terminal or Anaconda Prompt:
+
+|
+|____ @> conda install numpy
+
+If you are using conda, you can use the following command to install a specific version of NumPy:
+
+|
+|____  @> conda install numpy=<version>
+
+# Freeze your python packages and their versions in a requirements.txt file you
+have to turn-in.
+
+
+To freeze your Python packages and their versions in a requirements.txt file, 
+you can use the pip freeze command. Here are the steps:
+|
+|____ @> pip freeze > requirements.txt

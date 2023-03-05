@@ -1,0 +1,50 @@
+# install conda 
+
+We recommend the following path for your conda folder.
+@> MYPATH="/goinfre/$USER/miniconda3"
+
+#Download & Install conda
+
+# For MAC
+@> curl -LO "https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh"
+@> sh Miniconda3-latest-MacOSX-x86_64.sh -b -p $MYPATH
+# For Linux
+@> curl -LO "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
+@> sh Miniconda3-latest-Linux-x86_64.sh -b -p $MYPATH
+
+# For zsh
+@> $MYPATH/bin/conda init zsh
+@> $MYPATH/bin/conda config --set auto_activate_base false
+@> source ~/.zshrc
+# For bash
+@> $MYPATH/bin/conda init bash
+@> $MYPATH/bin/conda config --set auto_activate_base false
+@> source ~/.bash_profile
+
+#Create an environment for 42AI !
+
+@> conda create --name 42AI-$USER python=3.7 jupyter pandas pycodestyle numpy
+
+# Check your 42AI Python environment
+
+@> conda info --envs
+@> conda activate 42AI-$USER
+@> which python
+@> python -V
+@> python -c "print('Hello World!')"
+
+# install packages
+|
+|___________ _Defaulf channels 
+        |__ @> conda install _package_name
+|
+|___________ _Other 
+        |____@> conda instal -c channel_name package name 
+        |__ or we can add the channel to the default channels by : @> conda config -add channels _channel_name 
+                                                                   @> conda install _packege_name 
+|
+|_________ to see all channels : @> conda config show channles
+
+# deactivate env
+|
+|______ $> conda @> deactivate 
