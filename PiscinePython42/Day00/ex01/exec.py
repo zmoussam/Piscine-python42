@@ -1,9 +1,15 @@
 import argparse
 
-parser = argparse.ArgumentParser()
-parser.add_argument('num1', type=str, help='first number')
-# parser.add_argument('num2', type=int, help='second number')
+parser = argparse.ArgumentParser(description='finds the arguments')
+parser.add_argument('arguments', nargs='+', help='first argument' )
 
 args = parser.parse_args()
-
-print(args.num1)
+if not args.arguments:
+   print('No arguments provided')
+else:
+    numArg = len(args.arguments)
+    print(numArg)
+# arg = list(arg)
+# arg.reverse()
+# arg = arg[::-1]
+# arg = arg.swapcase()
