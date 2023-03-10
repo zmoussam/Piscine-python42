@@ -2,7 +2,7 @@
 import random
 import curses
 
-# Initialize the curses library to create our screen
+# Initialize the curses    library to create our screen
 screen = curses.initscr()
 
 # Hide the mouse cursor
