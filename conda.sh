@@ -7,6 +7,7 @@ function which_dl {
         echo "Miniconda3-latest-Linux-x86_64.sh"
     fi
 }
+
 function which_shell {
     # if $SHELL contains zsh, zsh. Else Bash
     if echo $SHELL | grep -iqF zsh; then
@@ -15,6 +16,7 @@ function which_shell {
         echo "bash"
     fi
 }
+
 function when_conda_exist {
     # check and install 42AI environement
     printf "Checking 42AI-$USER environment: "
@@ -27,6 +29,7 @@ function when_conda_exist {
         conda create --name 42AI-$USER python=3.7 jupyter numpy pandas pycodestyle -y
     fi
 }
+
 function set_conda {
     MINICONDA_PATH="/goinfre/$USER/miniconda3"
     CONDA=$MINICONDA_PATH"/bin/conda"
