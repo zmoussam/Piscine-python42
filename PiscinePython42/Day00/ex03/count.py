@@ -1,3 +1,5 @@
+import sys
+
 def text_analyzer(string=None):
         ''' 
             This function counts the number
@@ -24,3 +26,10 @@ def text_analyzer(string=None):
         print("- " + str(lower) + " lower letter(s)")
         print("- " + str(punctuation) + " punctuation mark(s)")
         print("- " + str(space) + " space(s)")
+
+lenght = len(sys.argv)
+
+if lenght > 2:
+    print("invalid argument!!\n")
+elif lenght == 2:
+    text_analyzer(sys.argv[1])
