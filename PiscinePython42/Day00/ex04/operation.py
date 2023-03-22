@@ -19,5 +19,7 @@ else:
         except ZeroDivisionError:
             print("Quotient:   ERROR (division by zero)")
             print("Remainder:  ERROR (module by zero)")
+        except:
+            print("invalid operation!")
     else:
         print("AssertionError: only integers")
