@@ -33,3 +33,17 @@ if lenght > 2:
     print("invalid argument!!\n")
 elif lenght == 2:
     text_analyzer(sys.argv[1])
+
+#for test 
+#$> python3
+#>>> from count import text_analyzer
+#>>> text_analyzer("Python 2.0, released 2000, introduced
+#features like List comprehensions and a garbage collection
+#system capable of collecting reference cycles.")
+#The text contains 143 character(s):
+#- 2 upper letter(s)
+#- 113 lower letter(s)
+#- 4 punctuatio
+#>>> print(text_analyzer.__doc__)
+#This function counts the number of upper characters, lower characters,
+#punctuation and spaces in a given text.
