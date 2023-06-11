@@ -6,7 +6,7 @@ print(friends[1:])
 print(friends[1:4])
 
 # friends += Family
-friends.extend(Family) # the same thing
+friends.extend(Family) # the same thingf
 print(friends)
 friends.append("python3")
 print(friends)
