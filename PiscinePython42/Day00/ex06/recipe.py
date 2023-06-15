@@ -36,21 +36,31 @@ def deleteRecipe(recipeName, menu):
 
 def addRecipe(cookbook):
     name = input("Enter a name:\n")
+
     ingredients = []
-    i = 0
-    print("Enter ingredients:\n")
+    print("Enter ingredients:")
     while True :
-        ingredients[i] = input()
-        i+=1
-    # ingredients = list(input("Enter ingredients:\n").split(","))
+        item = input()
+        if(item == ""):
+            break
+        ingredients.append(item)
+    
     mealType = input("Enter a meal type:\n")
-    prepTime = int(input("Enter a preparation time:\n"))
+
+    prepTime = input("Enter a preparation time:\n")
+    
+    while(not prepTime.isdigit()):
+        print("\nyou should intput time as digits!\n")
+        prepTime = input("Enter a preparation time:\n")
+    
+    prepTime = int(prepTime)
     
     newRecipe = {
         'ingredients' : ingredients,
         'meal'        : mealType,
         'prep_time'   : prepTime
     }
+    
     cookbook[name] = newRecipe
 
 # # printRecipeDetails("Cake", cookbook)
@@ -58,4 +68,4 @@ def addRecipe(cookbook):
 # printRecipeName(cookbook)
 addRecipe(cookbook)
 printRecipeName(cookbook)
-printRecipeDetails("omlet",cookbook)
+printRecipeDetails("www",cookbook)
