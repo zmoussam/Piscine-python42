@@ -17,4 +17,9 @@ end
 prevValues = {}
 for each num, index in nums:
     neededValue = target - num;
-    index2 = 
+    index2 = prevValues[neededValue]
+    if index2 != null
+        Return[index2, index]
+    else
+        prevValues[num] = index 
+--------------------------------------------  
