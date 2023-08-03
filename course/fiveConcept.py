@@ -47,4 +47,24 @@
 def complicated_function(x, y, z = 10):
     print(x, y, z)
     pass
+
+def complicated_function2(*args , **kwargs):
+    print(args, kwargs)
+    pass
+
+def complicated_function3(a, b, c = True, d = False):
+    print(a, b, c, d)
+    pass
+
 complicated_function(1, y = 3)
+complicated_function2(1, 2, 3,4, a = "hey", b = 123)
+complicated_function3(*[1, 2], **{"c": "hello", "d" : "cool"})
+
+#----4------if __name__ == "__main__":
+
+def add(a, b):
+    return a + b
+
+if __name__ == "__main__":
+    print("run")
+#we should import this module in an other file to see the difference
